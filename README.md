@@ -1,5 +1,5 @@
 # nginx-junk-reducer
-Block recurrent attackers with Nginx.
+Block recurrent junk requests with Nginx.
 
 This file was originally made to reduce junk in our Laravel application access logs.
 
