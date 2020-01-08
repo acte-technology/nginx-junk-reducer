@@ -7,7 +7,7 @@
 # Block common Wordpress attacks
 location ~* wlwmanifest.xml$ { deny all; }
 
-location ~* (wp-config|wp-version|wp-cache|wp-login|xmlrpc|wp-sbb).php {
+location ~* /(wp-config|wp-version|wp-cache|wp-login|xmlrpc|wp-sbb|wp-json).php {
     deny all;
 }
 
@@ -17,8 +17,11 @@ location ~* /(wp-admin|wp-login|wp-includes|wp-content) {
 
 
 ###
-# Block phpmyadmin requests
+# Block phpmyadmin|adminer requests
 location ~* /(phpmyadmin|myadmin) {
+    deny all;
+}
+location ~* /adminer*.php {
     deny all;
 }
 
