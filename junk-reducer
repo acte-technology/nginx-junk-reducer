@@ -44,3 +44,8 @@ location ~* \.(gz|tar|bz2)$|/\. {
 location ~* \.(bak|sql|dump|asp|aspx)$|/\. {
     deny all;
 }
+
+# Block hidden files
+location ~/\. {
+    deny all;
+}
