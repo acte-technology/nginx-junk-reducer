@@ -1,5 +1,5 @@
 # /etc/nginx/
-# ACTE Solutions
+# ACTE Technology
 # https://github.com/acte-solutions/nginx-junk-reducer
 
 
@@ -33,6 +33,12 @@ location ~* install.php {
     deny all;
 }
 
+###
+# Block phpunit requests
+
+location ~* phpunit.xsd {
+    deny all;
+}
 
 ###
 # Deny some archives extensions
